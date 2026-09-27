@@ -1,0 +1,54 @@
+name: Deploy tool to Pages
+
+# Publishes app/ with data/ beside it, so the tool fetches the same files that
+# are in the repository. No build step: the tool is one HTML file.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Assemble the site
+        run: |
+          mkdir -p site
+          cp -r app site/app
+          cp -r data site/data
+          # The tool fetches ../data/, so it has to live one level down. The
+          # root is a redirect rather than a copy: a copy at the root would
+          # resolve ../data above the site and fetch nothing.
+          cat > site/index.html <<'HTML'
+          <!doctype html><meta charset="utf-8">
+          <title>Role morphs</title>
+          <meta http-equiv="refresh" content="0; url=./app/">
+          <link rel="canonical" href="./app/">
+          <p><a href="./app/">Find your role</a></p>
+          HTML
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

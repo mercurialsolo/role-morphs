@@ -1,0 +1,108 @@
+# Companies whose job boards the pipeline reads.
+#
+# Every entry here is a public, unauthenticated JSON endpoint published by an
+# applicant tracking system for the purpose of syndicating open roles. We read
+# the structured fields and the posting URL. We do not store posting bodies:
+# that text belongs to the employer, and this repository is public.
+#
+# Each slug below was verified to return HTTP 200 on 2026-09-26. To add one,
+# find the company's board and check which ATS serves it:
+#
+#   greenhouse  https://boards-api.greenhouse.io/v1/boards/<slug>/jobs
+#   ashby       https://api.ashbyhq.com/posting-api/job-board/<slug>
+#   lever       https://api.lever.co/v0/postings/<slug>
+#
+# `segment` is used for reporting, not for fetching.
+
+companies:
+  # Frontier labs
+  - name: Anthropic
+    ats: greenhouse
+    slug: anthropic
+    segment: lab
+  - name: OpenAI
+    ats: ashby
+    slug: openai
+    segment: lab
+
+  # AI product companies
+  - name: Cursor
+    ats: ashby
+    slug: cursor
+    segment: ai_product
+  - name: Perplexity
+    ats: ashby
+    slug: perplexity
+    segment: ai_product
+  - name: Sierra
+    ats: ashby
+    slug: sierra
+    segment: ai_product
+  - name: Harvey
+    ats: ashby
+    slug: harvey
+    segment: ai_product
+  - name: Decagon
+    ats: ashby
+    slug: decagon
+    segment: ai_product
+  - name: Replit
+    ats: ashby
+    slug: replit
+    segment: ai_product
+  - name: Modal
+    ats: ashby
+    slug: modal
+    segment: ai_infra
+  - name: Browserbase
+    ats: ashby
+    slug: browserbase
+    segment: ai_infra
+
+  # Data and evaluation suppliers: the industry that sells labs their training
+  # environments and expert data. The taxonomy's QA and training-data rows
+  # depend on this segment existing.
+  - name: Mercor
+    ats: ashby
+    slug: mercor
+    segment: data_supplier
+  - name: Scale AI
+    ats: greenhouse
+    slug: scaleai
+    segment: data_supplier
+
+  # Non-AI-native companies. The essay's claim is that AI-shaped roles appear
+  # outside tech too; these are here so that claim can be checked rather than
+  # asserted.
+  - name: Databricks
+    ats: greenhouse
+    slug: databricks
+    segment: enterprise
+  - name: Stripe
+    ats: greenhouse
+    slug: stripe
+    segment: enterprise
+  - name: Ramp
+    ats: ashby
+    slug: ramp
+    segment: enterprise
+  - name: Notion
+    ats: ashby
+    slug: notion
+    segment: enterprise
+  - name: Linear
+    ats: ashby
+    slug: linear
+    segment: enterprise
+  - name: Vercel
+    ats: ashby
+    slug: vercel
+    segment: enterprise
+  - name: Airtable
+    ats: greenhouse
+    slug: airtable
+    segment: enterprise
+  - name: Figure
+    ats: greenhouse
+    slug: figure
+    segment: robotics

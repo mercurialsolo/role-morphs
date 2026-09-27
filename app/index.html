@@ -1,0 +1,370 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Role morphs: find your role</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --g:#faf9f7;--ink:#16150f;--ink2:#55524a;--ink3:#817d72;--rule:#e3e0d8;--rs:#c9c5ba;
+  --chip:#f1efe9;--chipOn:#16150f;--chipOnInk:#faf9f7;--card:#fff;
+  --op:#eb6834;--dec:#2a78d6;--str:#8a877d;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
+}
+@media(prefers-color-scheme:dark){:root{
+  --g:#1a1a19;--ink:#f5f4ef;--ink2:#c3c2b7;--ink3:#8f8e84;--rule:#35352f;--rs:#4b4b43;
+  --chip:#2a2a26;--chipOn:#f5f4ef;--chipOnInk:#1a1a19;--card:#212120;
+  --op:#e0763c;--dec:#3987e5;--str:#8f8e84;
+}}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--g);color:var(--ink);font-family:var(--sans);
+  padding:16px 14px 12px;-webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums;
+  display:flex;flex-direction:column;overflow:hidden}
+.head{flex:none}
+.scroller{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;padding-right:2px;
+  mask-image:linear-gradient(to bottom,#000 calc(100% - 18px),transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 18px),transparent 100%)}
+.kicker{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin:0 0 6px}
+h1{font-size:16px;font-weight:600;margin:0 0 4px;line-height:1.25}
+.lede{font-size:12.5px;color:var(--ink2);margin:0 0 14px;line-height:1.5;max-width:64ch}
+
+.controls{display:flex;flex-direction:column;gap:9px;margin:0 0 12px}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.lbl{font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink3);margin-right:2px;flex:none;min-width:62px}
+button.chip{font-family:var(--sans);font-size:11.5px;line-height:1;padding:6px 10px;border-radius:999px;
+  border:1px solid var(--rule);background:var(--chip);color:var(--ink2);cursor:pointer;
+  transition:background .12s,color .12s,border-color .12s}
+button.chip:hover{border-color:var(--rs)}
+button.chip[aria-pressed="true"]{background:var(--chipOn);color:var(--chipOnInk);border-color:var(--chipOn)}
+button.chip .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:1px}
+input[type=search]{font-family:var(--sans);font-size:12.5px;padding:7px 10px;border-radius:7px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink);width:100%;max-width:280px}
+input[type=search]:focus{outline:2px solid var(--dec);outline-offset:1px;border-color:var(--dec)}
+/* Seven discipline chips wrap to two rows on a phone and swallow the panel.
+   There they collapse into one native select, which is a single 44px target
+   and keeps the filter rather than dropping it. */
+.discSelRow{display:none}
+select#discSel{font-family:var(--sans);font-size:12.5px;padding:7px 10px;border-radius:7px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink);width:100%;max-width:280px}
+select#discSel:focus{outline:2px solid var(--dec);outline-offset:1px;border-color:var(--dec)}
+
+.tally{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;
+  font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ink3);margin:0 0 10px;padding-bottom:9px;border-bottom:1px solid var(--rule)}
+.tally b{color:var(--ink);font-weight:500}
+.tally .sw{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;vertical-align:0}
+
+ul.list{list-style:none;margin:0;padding:0 0 20px;display:grid;gap:7px}
+li.item{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--rs);
+  border-radius:7px;padding:10px 12px}
+li.item[data-layer="Operational"]{border-left-color:var(--op)}
+li.item[data-layer="Decision"]{border-left-color:var(--dec)}
+li.item[data-layer="Structural"]{border-left-color:var(--str)}
+.morph{font-size:13.5px;line-height:1.35;margin:0 0 3px}
+.was{color:var(--ink2)}
+.arrow{font-family:var(--mono);color:var(--ink3);margin:0 6px}
+.becomes{font-weight:600;color:var(--ink)}
+.moved{font-size:12px;color:var(--ink2);line-height:1.45;margin:0 0 7px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;
+  font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase}
+.tag{padding:2px 6px;border-radius:4px;background:var(--chip);color:var(--ink3);white-space:nowrap}
+.tag.layer{color:var(--chipOnInk)}
+/* live counts come from the pipeline, not the hand-built rows, so they read
+   differently: outlined rather than filled, and cursor-help for the tooltip */
+.tag.live{background:transparent;border:1px solid var(--rs);color:var(--ink2);cursor:help}
+.tag.layer[data-l="Operational"]{background:var(--op)}
+.tag.layer[data-l="Decision"]{background:var(--dec)}
+.tag.layer[data-l="Structural"]{background:var(--str)}
+.meta a{color:var(--ink3);text-decoration:underline;text-underline-offset:2px}
+.meta a:hover{color:var(--ink)}
+.note{font-size:11.5px;color:var(--ink3);line-height:1.45;margin:7px 0 0;
+  padding-top:7px;border-top:1px dotted var(--rule)}
+.empty{font-size:12.5px;color:var(--ink3);padding:20px 0;text-align:center}
+.src{flex:none;font-family:var(--mono);font-size:8.5px;letter-spacing:.04em;color:var(--ink3);
+  margin:8px 0 0;padding-top:8px;border-top:1px dotted var(--rule);text-transform:uppercase;line-height:1.55}
+/* Mobile scales type UP, not down, and every control clears a 44px tap
+   target (WCAG 2.2 AA asks 24px; 44px is the comfortable thumb size). */
+@media(max-width:560px){
+  body{padding:14px 13px 10px}
+  .kicker{display:none}
+  h1{font-size:17px;margin-bottom:8px}
+  .lede{display:none}                 /* the caption under the embed says the same */
+  .controls{gap:10px;margin-bottom:12px}
+  /* the controls say what they are: a placeholder, a select of disciplines,
+     chips named Operational / Decision / Structural. The labels above them
+     cost ~60px of a panel that only has room for a card or two. */
+  .lbl{display:none}
+  #disc{display:none}
+  .discSelRow{display:flex}
+  select#discSel{max-width:100%;font-size:16px;padding:11px 12px;min-height:44px}
+  .row{gap:8px}
+  /* 16px keeps iOS from zooming the page when the field takes focus */
+  input[type=search]{max-width:100%;font-size:16px;padding:11px 12px;min-height:44px}
+  button.chip{font-size:14px;padding:0 15px;min-height:44px}
+  button.chip .hint{display:none}     /* keep just Operational / Decision / Structural */
+  .tally{font-size:11px;gap:10px;margin-bottom:10px;padding-bottom:9px}
+  .morph{font-size:15px}
+  .moved{font-size:13.5px}
+  .meta{font-size:11px;gap:8px}
+  .tag{padding:4px 8px}
+  .meta a{display:inline-block;padding:7px 0;min-height:24px}
+  .note{font-size:13px}
+  li.item{padding:12px 13px}
+  .src{font-size:10px;line-height:1.6}
+}
+</style>
+
+<div class="head">
+<h1 id="h" hidden>Find your role</h1>
+<p class="lede">Every field automates its operational work first and its decision work last. The operational layer is still where judgement gets learnt.</p>
+
+<div class="controls">
+  <div class="row"><span class="lbl">Search</span>
+    <input type="search" id="q" placeholder="role, e.g. postdoc, QA, scribe" aria-label="Search roles">
+  </div>
+  <div class="row" id="disc"><span class="lbl">Discipline</span></div>
+  <div class="row discSelRow"><span class="lbl">Discipline</span>
+    <select id="discSel" aria-label="Filter by discipline"></select>
+  </div>
+  <div class="row" id="layer"><span class="lbl">Layer</span></div>
+</div>
+
+<p class="tally" id="tally"></p>
+</div>
+<div class="scroller"><ul class="list" id="list"></ul></div>
+<p class="src" id="src"></p>
+
+<script>
+let ROWS = [];
+let LIVE = {};   // row id -> distinct live postings carrying that role
+let SNAPSHOT = null;
+
+const DISCIPLINES = ["Software","Product","Science","Legal","Medicine","The firm"];
+const LAYERS = [
+  {k:"Operational", hint:"automated first"},
+  {k:"Decision",    hint:"still human"},
+  {k:"Structural",  hint:"the job's shape changes"}
+];
+
+let fDisc = "All", fLayer = "All", fQ = "";
+
+function chip(parent, label, active, onClick, dotVar){
+  const b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.setAttribute("aria-pressed", String(active));
+  if (dotVar){
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.style.background = dotVar;
+    b.appendChild(dot);
+  }
+  b.appendChild(document.createTextNode(label));
+  b.addEventListener("click", onClick);
+  parent.appendChild(b);
+  return b;
+}
+
+function buildControls(){
+  const d = document.getElementById("disc");
+  chip(d, "All", fDisc === "All", () => { fDisc = "All"; render(); });
+  DISCIPLINES.forEach(function (name) {
+    chip(d, name, fDisc === name, () => { fDisc = name; render(); });
+  });
+
+  const l = document.getElementById("layer");
+  chip(l, "All", fLayer === "All", () => { fLayer = "All"; render(); });
+  LAYERS.forEach(function (L) {
+    const varName = L.k === "Operational" ? "var(--op)" : L.k === "Decision" ? "var(--dec)" : "var(--str)";
+    const b = chip(l, L.k, fLayer === L.k, () => { fLayer = L.k; render(); }, varName);
+    const hint = document.createElement("span");
+    hint.className = "hint";
+    hint.textContent = " · " + L.hint;
+    b.appendChild(hint);
+  });
+
+  const sel = document.getElementById("discSel");
+  ["All"].concat(DISCIPLINES).forEach(function (name) {
+    const o = document.createElement("option");
+    o.value = name; o.textContent = name === "All" ? "All disciplines" : name;
+    sel.appendChild(o);
+  });
+  sel.addEventListener("change", function () { fDisc = sel.value; render(); });
+
+  document.getElementById("q").addEventListener("input", function (ev) {
+    fQ = ev.target.value.trim().toLowerCase();
+    render();
+  });
+}
+
+function syncChips(){
+  const d = document.getElementById("disc").querySelectorAll("button");
+  d[0].setAttribute("aria-pressed", String(fDisc === "All"));
+  DISCIPLINES.forEach((name, i) => d[i + 1].setAttribute("aria-pressed", String(fDisc === name)));
+  const sel = document.getElementById("discSel");
+  if (sel && sel.value !== fDisc) sel.value = fDisc;
+  const l = document.getElementById("layer").querySelectorAll("button");
+  l[0].setAttribute("aria-pressed", String(fLayer === "All"));
+  LAYERS.forEach((L, i) => l[i + 1].setAttribute("aria-pressed", String(fLayer === L.k)));
+}
+
+function matches(r){
+  if (fDisc !== "All" && r.d !== fDisc) return false;
+  if (fLayer !== "All" && r.l !== fLayer) return false;
+  if (fQ){
+    const hay = (r.w + " " + r.b + " " + r.m + " " + r.d + " " + r.n).toLowerCase();
+    if (hay.indexOf(fQ) === -1) return false;
+  }
+  return true;
+}
+
+function render(){
+  syncChips();
+  const sc = document.querySelector(".scroller");
+  if (sc) sc.scrollTop = 0;
+  const shown = ROWS.filter(matches);
+  const list = document.getElementById("list");
+  list.textContent = "";
+
+  const counts = {Operational: 0, Decision: 0, Structural: 0};
+  shown.forEach(r => counts[r.l]++);
+
+  const tally = document.getElementById("tally");
+  tally.textContent = "";
+  const n = document.createElement("span");
+  n.innerHTML = "<b>" + shown.length + "</b> of " + ROWS.length + " rows";
+  tally.appendChild(n);
+  LAYERS.forEach(function (L) {
+    if (!counts[L.k]) return;
+    const varName = L.k === "Operational" ? "var(--op)" : L.k === "Decision" ? "var(--dec)" : "var(--str)";
+    const s = document.createElement("span");
+    s.innerHTML = '<span class="sw" style="background:' + varName + '"></span><b>' + counts[L.k] + "</b> " + L.k;
+    tally.appendChild(s);
+  });
+
+  if (!shown.length){
+    const p = document.createElement("li");
+    p.className = "empty";
+    p.textContent = "No rows match. Try clearing the search, or picking All.";
+    list.appendChild(p);
+    return;
+  }
+
+  shown.forEach(function (r) {
+    const li = document.createElement("li");
+    li.className = "item";
+    li.setAttribute("data-layer", r.l);
+
+    const morph = document.createElement("p");
+    morph.className = "morph";
+    const was = document.createElement("span"); was.className = "was"; was.textContent = r.w;
+    const ar = document.createElement("span"); ar.className = "arrow"; ar.textContent = "→";
+    const bec = document.createElement("span"); bec.className = "becomes"; bec.textContent = r.b;
+    morph.appendChild(was); morph.appendChild(ar); morph.appendChild(bec);
+    li.appendChild(morph);
+
+    const moved = document.createElement("p");
+    moved.className = "moved";
+    moved.textContent = r.m;
+    li.appendChild(moved);
+
+    const meta = document.createElement("div");
+    meta.className = "meta";
+    const lt = document.createElement("span");
+    lt.className = "tag layer"; lt.setAttribute("data-l", r.l); lt.textContent = r.l;
+    meta.appendChild(lt);
+    const dt = document.createElement("span"); dt.className = "tag"; dt.textContent = r.d;
+    meta.appendChild(dt);
+    const et = document.createElement("span"); et.className = "tag"; et.textContent = r.e;
+    meta.appendChild(et);
+    if (r.s){
+      const a = document.createElement("a");
+      a.href = r.s; a.target = "_blank"; a.rel = "noopener noreferrer";
+      a.textContent = "source";
+      meta.appendChild(a);
+    }
+    li.appendChild(meta);
+
+    const live = LIVE[r.id];
+    if (live && live.distinct_roles){
+      const pill = document.createElement("span");
+      pill.className = "tag live";
+      pill.textContent = live.distinct_roles + (live.distinct_roles === 1 ? " open role" : " open roles");
+      pill.title = "Postings whose title contains " + live.terms.join(" / ") +
+                   " across " + live.companies.length + " companies: " + live.companies.join(", ");
+      meta.appendChild(pill);
+    }
+
+    if (r.n){
+      const note = document.createElement("p");
+      note.className = "note";
+      note.textContent = r.n;
+      li.appendChild(note);
+    }
+
+    list.appendChild(li);
+  });
+}
+
+function describeSources(){
+  // Counted from the file rather than written down, so the line cannot drift
+  // out of step with the rows the way a hand-maintained sentence would.
+  const order = ["Named study","Job posting","Industry reporting","Research team page","Vendor claim","Argued only"];
+  const phrase = {
+    "Named study": "a named study", "Job posting": "job postings",
+    "Industry reporting": "industry reporting", "Research team page": "a research team page",
+    "Vendor claim": "a vendor's own claim", "Argued only": "argument alone"
+  };
+  const tally = {};
+  ROWS.forEach(r => { tally[r.e] = (tally[r.e] || 0) + 1; });
+  const parts = order.filter(k => tally[k]).map(k => tally[k] + " on " + phrase[k]);
+  let line = "Scanned off career pages, research-team pages and industry reporting \u00b7 " +
+             ROWS.length + " rows: " + parts.join(", ");
+  if (SNAPSHOT) {
+    line += " \u00b7 Live counts from " + SNAPSHOT.board_count + " job boards, " +
+            SNAPSHOT.posting_count.toLocaleString() + " postings, " + SNAPSHOT.snapshot_date;
+  }
+  document.getElementById("src").textContent = line;
+}
+
+// the section heading already says "Find your role"; only show the tool's own
+// title when it is opened on its own rather than inside the post
+if (window.self === window.top) {
+  var h = document.getElementById("h"); if (h) h.hidden = false;
+}
+
+const KEYS = {discipline:"d", layer:"l", was:"w", becomes:"b", morph:"m", evidence_type:"e", source_url:"s", note:"n"};
+
+function toRow(record){
+  // The render code speaks the compact keys the tool was written against; the
+  // data file speaks readable ones. One map, one place to change it.
+  const row = {id: record.id};
+  for (const long in KEYS) row[KEYS[long]] = record[long] || "";
+  return row;
+}
+
+async function boot(){
+  try {
+    const [morphs, matches] = await Promise.all([
+      fetch("../data/role-morphs.json").then(r => r.json()),
+      fetch("../data/matches.json").then(r => r.ok ? r.json() : null).catch(() => null)
+    ]);
+    ROWS = morphs.map(toRow);
+    if (matches){
+      SNAPSHOT = matches;
+      matches.rows.forEach(m => { LIVE[m.id] = m; });
+    }
+  } catch (err) {
+    document.getElementById("list").innerHTML =
+      '<li class="empty">Could not load data/role-morphs.json. ' +
+      'Serve this directory over HTTP (python3 -m http.server) rather than opening the file directly.</li>';
+    return;
+  }
+  buildControls();
+  describeSources();
+  render();
+}
+
+boot();
+</script>

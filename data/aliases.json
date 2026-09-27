@@ -1,0 +1,160 @@
+{
+  "_comment": [
+    "Extra title phrasings that count as a taxonomy row's new role.",
+    "A row's own `becomes` value is used as a search term by default. Rows",
+    "listed in `too_generic` are the exception: their `becomes` is a word",
+    "common enough in job titles that matching on it would count noise as",
+    "evidence ('Agent' matches Support Agent, 'Hypothesis' matches nothing",
+    "useful). Those rows are searched on their aliases only, and a row with",
+    "neither is reported as unsearchable rather than as zero.",
+    "Add terms here when you find a board spelling a role a new way. Terms",
+    "are matched case-insensitively as substrings of the title.",
+    "the-firm-software-company-computational-lab has no searchable term: 'research engineer' matches every lab's ordinary research hiring, which is not evidence for the claim. It reports as unsearchable, which is honest."
+  ],
+  "too_generic": [
+    "product-product-agent",
+    "software-issue-hypothesis",
+    "the-firm-practising-professional-training-data",
+    "medicine-clinical-note-note-review",
+    "product-analytics-and-insights-behavioural-models",
+    "the-firm-software-company-computational-lab"
+  ],
+  "aliases": {
+    "software-software-engineer-ai-engineer": [
+      "ai engineer",
+      "applied ai engineer",
+      "agent engineer",
+      "ai solutions engineer"
+    ],
+    "software-infrastructure-engineering-inference-engineering": [
+      "inference engineer",
+      "inference systems",
+      "performance engineer",
+      "ml accelerator",
+      "gpu kernel"
+    ],
+    "software-qa-rl-environment-design": [
+      "rl environment",
+      "environments engineer",
+      "environment engineer",
+      "evals engineer",
+      "evaluation engineer",
+      "agent post-training"
+    ],
+    "software-solutions-engineer-fde": [
+      "forward deployed"
+    ],
+    "software-debugging-mechanistic-interpretability": [
+      "interpretability"
+    ],
+    "software-issue-hypothesis": [
+      "post-training research",
+      "model behavior research"
+    ],
+    "product-product-manager-ai-builder": [
+      "ai product manager",
+      "product manager, ai",
+      "product manager ai"
+    ],
+    "product-product-design-model-behaviour": [
+      "model behavior",
+      "model behaviour",
+      "model policy",
+      "agent behavior",
+      "agent behaviour"
+    ],
+    "product-analytics-and-insights-behavioural-models": [
+      "user research, ai",
+      "behavioral science"
+    ],
+    "product-partner-embedded-evaluator": [
+      "evaluation lead",
+      "applied evaluation",
+      "forward deployed product"
+    ],
+    "product-product-agent": [
+      "agent product manager",
+      "agent platform",
+      "agent experience"
+    ],
+    "science-bench-scientist-autonomous-lab-supervisor": [
+      "lab automation",
+      "autonomous lab",
+      "self-driving lab"
+    ],
+    "science-lab-automation-ai-lab-innovation": [
+      "ai lab innovation",
+      "lab innovation"
+    ],
+    "science-postdoc-ai-paired-researcher": [
+      "ai resident",
+      "research fellow, ai",
+      "ai for science"
+    ],
+    "science-experiment-design-open-ended-search": [
+      "open-endedness",
+      "open ended learning"
+    ],
+    "legal-practice-innovation-director-of-ai": [
+      "director of ai",
+      "head of ai",
+      "ai counsel",
+      "legal operations, ai"
+    ],
+    "legal-practising-attorney-legal-engineer": [
+      "legal engineer",
+      "legal solutions engineer",
+      "domain expert, legal"
+    ],
+    "legal-document-review-audit-sampling": [
+      "review quality",
+      "legal quality"
+    ],
+    "legal-billable-hour-outcome-pricing": [
+      "outcome-based pricing",
+      "pricing strategy, ai"
+    ],
+    "medicine-medical-scribe-ambient-recorder": [
+      "ambient",
+      "clinical documentation"
+    ],
+    "medicine-clinical-note-note-review": [
+      "clinical review",
+      "clinical quality"
+    ],
+    "medicine-radiologist-ai-assisted-reader": [
+      "clinical ai",
+      "radiology ai"
+    ],
+    "medicine-clinical-audit-continuous-model-monitoring": [
+      "model monitoring",
+      "clinical safety"
+    ],
+    "medicine-health-it-procurement-chief-health-ai-officer": [
+      "health ai",
+      "chief ai officer"
+    ],
+    "the-firm-compliance-ai-assurance": [
+      "ai assurance",
+      "ai governance",
+      "responsible ai",
+      "ai compliance",
+      "model risk"
+    ],
+    "the-firm-economist-in-house-measurer": [
+      "economist",
+      "economic research"
+    ],
+    "the-firm-org-behaviour-agent-society-behaviour": [
+      "multi-agent",
+      "multiagent"
+    ],
+    "the-firm-practising-professional-training-data": [
+      "human data",
+      "domain expert",
+      "expert data",
+      "data quality, ai"
+    ],
+    "the-firm-software-company-computational-lab": []
+  }
+}

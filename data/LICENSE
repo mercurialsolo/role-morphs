@@ -1,0 +1,22 @@
+The datasets in this directory are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt them for any purpose, including commercially, provided
+you give appropriate credit and indicate if changes were made.
+
+Attribute as:
+
+    Role morphs, https://github.com/mercurialsolo/role-morphs, CC BY 4.0
+
+Two notes on what you are attributing.
+
+Job-posting records under data/postings/ are factual metadata about publicly
+advertised roles: title, team, location, identifier, and the employer's own
+URL. Posting bodies are not collected and are not covered here; that text
+remains the employer's. Follow the URL to read it where they published it.
+
+Rows in role-morphs.json carry an evidence_type. Please carry it with them. A
+row graded "Argued only" is an argument, not a finding, and reproducing it
+without its grade would misrepresent the dataset.

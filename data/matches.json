@@ -1,0 +1,1479 @@
+{
+  "method": "Case-insensitive substring match of each row's `becomes` value (plus any aliases in data/aliases.json) against posting titles only. Not a classifier. `distinct_roles` counts one per (company, title) and is the number worth quoting; `match_count` is the raw posting count, which boards inflate by listing a role once per location. Zero matches means these boards do not use the phrase, not that the role is absent.",
+  "snapshot_date": "2026-09-26",
+  "posting_count": 4719,
+  "board_count": 20,
+  "rows_with_matches": 17,
+  "rows_unsearchable": 1,
+  "rows": [
+    {
+      "id": "software-solutions-engineer-fde",
+      "discipline": "Software",
+      "layer": "Operational",
+      "was": "Solutions engineer",
+      "becomes": "FDE",
+      "evidence_type": "Job posting",
+      "terms": [
+        "forward deployed"
+      ],
+      "searchable": true,
+      "distinct_roles": 92,
+      "match_count": 170,
+      "companies": [
+        "Anthropic",
+        "Cursor",
+        "Databricks",
+        "Modal",
+        "Notion",
+        "OpenAI",
+        "Ramp",
+        "Replit",
+        "Scale AI",
+        "Stripe"
+      ],
+      "by_segment": {
+        "ai_infra": 4,
+        "ai_product": 9,
+        "data_supplier": 17,
+        "enterprise": 111,
+        "lab": 29
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Forward Deployed Engineer",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5391021008",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Manager, Forward Deployed Engineering",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5385634008",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Pre-Sales Program Lead, Forward Deployed Engineering",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5391012008",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Cursor",
+          "segment": "ai_product",
+          "title": "Forward Deployed Engineer",
+          "url": "https://jobs.ashbyhq.com/cursor/34cecd0c-c392-4454-8ef5-261310541011",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Cursor",
+          "segment": "ai_product",
+          "title": "Forward Deployed Engineer - EMEA",
+          "url": "https://jobs.ashbyhq.com/cursor/0a82f564-de1b-4c72-9ba4-10cf2b63c483",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Cursor",
+          "segment": "ai_product",
+          "title": "Forward Deployed Strategist",
+          "url": "https://jobs.ashbyhq.com/cursor/6960dfef-6dc1-4dbb-887b-0fc9e6e4292e",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Cursor",
+          "segment": "ai_product",
+          "title": "RVP, Forward Deployed Engineering - EMEA",
+          "url": "https://jobs.ashbyhq.com/cursor/b3320730-9b59-42b6-8b90-0f2c3ef81c15",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Cursor",
+          "segment": "ai_product",
+          "title": "Regional Director, Forward Deployed Engineering",
+          "url": "https://jobs.ashbyhq.com/cursor/f7ec7811-a573-42fa-8ade-01e2d07681ef",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Databricks",
+          "segment": "enterprise",
+          "title": "AI Engineer - FDE (Forward Deployed Engineer)",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8099751002",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Databricks",
+          "segment": "enterprise",
+          "title": "AI Engineer \u2013 Forward Deployed Engineering (AI FDE)",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8546367002",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "software-software-engineer-ai-engineer",
+      "discipline": "Software",
+      "layer": "Operational",
+      "was": "Software engineer",
+      "becomes": "AI engineer",
+      "evidence_type": "Job posting",
+      "terms": [
+        "ai engineer",
+        "applied ai engineer",
+        "agent engineer",
+        "ai solutions engineer"
+      ],
+      "searchable": true,
+      "distinct_roles": 44,
+      "match_count": 63,
+      "companies": [
+        "Anthropic",
+        "Databricks",
+        "OpenAI",
+        "Perplexity",
+        "Ramp",
+        "Scale AI",
+        "Stripe"
+      ],
+      "by_segment": {
+        "ai_product": 1,
+        "data_supplier": 3,
+        "enterprise": 11,
+        "lab": 48
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Applied AI Engineer",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5390799008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Applied AI Engineer, Beneficial Deployments (Life Sciences)",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5413642008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Applied AI Engineer, Enterprise",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5390795008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Applied AI Engineer, Enterprise Tech",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5057647008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Applied AI Engineer, Startups",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5432575008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Manager, Applied AI Engineering,  Beneficial Deployments (Life Sciences)",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5277834008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Staff Software Engineer, GTM AI Engineering",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5390966008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Databricks",
+          "segment": "enterprise",
+          "title": "AI Engineer - FDE (Forward Deployed Engineer)",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8099751002",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Databricks",
+          "segment": "enterprise",
+          "title": "AI Engineer \u2013 Forward Deployed Engineering (AI FDE)",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8546367002",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Databricks",
+          "segment": "enterprise",
+          "title": "AI Engineer \u2013 Forward Deployed Engineering (AI FDE), U.S. Public Sector (Federal Focus)",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8760167002",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "legal-practising-attorney-legal-engineer",
+      "discipline": "Legal",
+      "layer": "Decision",
+      "was": "Practising attorney",
+      "becomes": "Legal engineer",
+      "evidence_type": "Job posting",
+      "terms": [
+        "legal engineer",
+        "legal solutions engineer",
+        "domain expert  legal"
+      ],
+      "searchable": true,
+      "distinct_roles": 19,
+      "match_count": 33,
+      "companies": [
+        "Harvey"
+      ],
+      "by_segment": {
+        "ai_product": 33
+      },
+      "examples": [
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Head of AMER Legal Engineering (In-House)",
+          "url": "https://jobs.ashbyhq.com/harvey/5314ef66-59f0-48f7-ac46-c7b404f15b6c",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Head of Legal Engineering, EMEA",
+          "url": "https://jobs.ashbyhq.com/harvey/b0570329-6c45-4446-9314-146c9dead90b",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Head of Legal Engineering, Product Specialists - EMEA",
+          "url": "https://jobs.ashbyhq.com/harvey/a7773695-38c2-41e2-bdfc-179693711556",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Legal Engineer (Energy or Tax)",
+          "url": "https://jobs.ashbyhq.com/harvey/9382f297-c572-4744-a0fd-989861e1bc27",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Legal Engineer (In-House)",
+          "url": "https://jobs.ashbyhq.com/harvey/963db922-ea97-47f1-9731-ed0ec1dc026a",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Legal Engineer (Law Firm, Corporate)",
+          "url": "https://jobs.ashbyhq.com/harvey/fd3eee99-2c94-4127-8b82-3582a79cd418",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Legal Engineer (Law Firm, Litigation/Regulatory)",
+          "url": "https://jobs.ashbyhq.com/harvey/e8dbf438-3086-42af-810e-4f4459cf7400",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Legal Engineer (Transactional or In-house)",
+          "url": "https://jobs.ashbyhq.com/harvey/099c04d5-4e8e-4bd2-9e39-2a8c4aaffce0",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Legal Engineer Manager, Munich",
+          "url": "https://jobs.ashbyhq.com/harvey/799df8d8-2d4c-459a-884b-61a7c9824ad8",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Legal Engineer Manager, Paris",
+          "url": "https://jobs.ashbyhq.com/harvey/3a8e3731-1a06-4d15-84c0-cfc564dd633c",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "software-infrastructure-engineering-inference-engineering",
+      "discipline": "Software",
+      "layer": "Operational",
+      "was": "Infrastructure engineering",
+      "becomes": "Inference engineering",
+      "evidence_type": "Job posting",
+      "terms": [
+        "inference engineering",
+        "inference engineer",
+        "inference systems",
+        "performance engineer",
+        "ml accelerator",
+        "gpu kernel"
+      ],
+      "searchable": true,
+      "distinct_roles": 12,
+      "match_count": 13,
+      "companies": [
+        "Anthropic",
+        "Modal",
+        "OpenAI",
+        "Perplexity"
+      ],
+      "by_segment": {
+        "ai_infra": 1,
+        "ai_product": 2,
+        "lab": 10
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Engineering Manager, GPU (ML Accelerator)",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4741104008",
+          "matched_term": "ml accelerator",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Performance Engineer",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4020350008",
+          "matched_term": "performance engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Performance Engineer, GPU",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4926227008",
+          "matched_term": "performance engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Performance Engineer, Inference Engine",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5418323008",
+          "matched_term": "performance engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Performance Engineer, Inference Systems",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5224564008",
+          "matched_term": "inference systems",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Modal",
+          "segment": "ai_infra",
+          "title": "Inference Engineering and Product Lead",
+          "url": "https://jobs.ashbyhq.com/modal/ead55e1a-873d-4837-8450-95fe8f4c8931",
+          "matched_term": "inference engineering",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "ChatGPT Performance Engineer",
+          "url": "https://jobs.ashbyhq.com/openai/38ddaa2c-a490-427a-8457-0e92bf00138c",
+          "matched_term": "performance engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Inference Engineer, Robotics",
+          "url": "https://jobs.ashbyhq.com/openai/3c2d1178-777f-4613-a084-75a3d37cd1af",
+          "matched_term": "inference engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "System Performance Engineer, Consumer Devices",
+          "url": "https://jobs.ashbyhq.com/openai/3fe77c71-1f20-45b5-8291-62f0d2104989",
+          "matched_term": "performance engineer",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Training Performance Engineer",
+          "url": "https://jobs.ashbyhq.com/openai/6eb386ac-9056-4795-aa79-a27e105faf5c",
+          "matched_term": "performance engineer",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "product-product-agent",
+      "discipline": "Product",
+      "layer": "Structural",
+      "was": "Product",
+      "becomes": "Agent",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "agent product manager",
+        "agent platform",
+        "agent experience"
+      ],
+      "searchable": true,
+      "distinct_roles": 11,
+      "match_count": 15,
+      "companies": [
+        "Browserbase",
+        "Decagon",
+        "Mercor",
+        "Replit",
+        "Sierra"
+      ],
+      "by_segment": {
+        "ai_infra": 1,
+        "ai_product": 13,
+        "data_supplier": 1
+      },
+      "examples": [
+        {
+          "company": "Browserbase",
+          "segment": "ai_infra",
+          "title": "Software Engineer (Agent Platform)",
+          "url": "https://jobs.ashbyhq.com/browserbase/7724fbe3-6a27-4418-9705-2dcc40751a16",
+          "matched_term": "agent platform",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Decagon",
+          "segment": "ai_product",
+          "title": "Agent Experience Designer",
+          "url": "https://jobs.ashbyhq.com/decagon/08b34a9e-6e98-40f3-9a81-ee6667bef97b",
+          "matched_term": "agent experience",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Decagon",
+          "segment": "ai_product",
+          "title": "Product Manager, Enterprise Agent Platform",
+          "url": "https://jobs.ashbyhq.com/decagon/e27fcbdf-891c-4b2f-9c47-d2bdc26eb2d4",
+          "matched_term": "agent platform",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Decagon",
+          "segment": "ai_product",
+          "title": "Senior Agent Product Manager",
+          "url": "https://jobs.ashbyhq.com/decagon/dcf9b561-f2fb-422b-88a9-33ce76e96608",
+          "matched_term": "agent product manager",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Decagon",
+          "segment": "ai_product",
+          "title": "Senior Agent Product Manager - Spanish Speaking",
+          "url": "https://jobs.ashbyhq.com/decagon/900c16c2-57b4-483c-9ec3-e2fab77f897a",
+          "matched_term": "agent product manager",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Decagon",
+          "segment": "ai_product",
+          "title": "Senior Agent Product Manager, Healthcare",
+          "url": "https://jobs.ashbyhq.com/decagon/95524337-b5e7-4156-9022-af5c192f174d",
+          "matched_term": "agent product manager",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Decagon",
+          "segment": "ai_product",
+          "title": "Senior Software Engineer, Agent Platform",
+          "url": "https://jobs.ashbyhq.com/decagon/75f544ae-7838-4ffa-9e6b-33d7e2b6ea2b",
+          "matched_term": "agent platform",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Decagon",
+          "segment": "ai_product",
+          "title": "Staff Software Engineer, Agent Platform",
+          "url": "https://jobs.ashbyhq.com/decagon/7df0a996-5a9f-496f-9f8b-c302983765b2",
+          "matched_term": "agent platform",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Mercor",
+          "segment": "data_supplier",
+          "title": "Fullstack Software Engineer, Agent Platform",
+          "url": "https://jobs.ashbyhq.com/mercor/3750ee8a-64d1-46ac-b4f9-6a823f949034",
+          "matched_term": "agent platform",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Replit",
+          "segment": "ai_product",
+          "title": "Staff Software Engineer, Agent Platform",
+          "url": "https://jobs.ashbyhq.com/replit/43bd4e63-22c3-4b80-abd2-67eaf2c89790",
+          "matched_term": "agent platform",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "software-qa-rl-environment-design",
+      "discipline": "Software",
+      "layer": "Operational",
+      "was": "QA",
+      "becomes": "RL environment design",
+      "evidence_type": "Job posting",
+      "terms": [
+        "rl environment design",
+        "rl environment",
+        "environments engineer",
+        "environment engineer",
+        "evals engineer",
+        "evaluation engineer",
+        "agent post training"
+      ],
+      "searchable": true,
+      "distinct_roles": 10,
+      "match_count": 10,
+      "companies": [
+        "Cursor",
+        "OpenAI",
+        "Scale AI"
+      ],
+      "by_segment": {
+        "ai_product": 1,
+        "data_supplier": 1,
+        "lab": 8
+      },
+      "examples": [
+        {
+          "company": "Cursor",
+          "segment": "ai_product",
+          "title": "Software Engineer, RL Environments",
+          "url": "https://jobs.ashbyhq.com/cursor/c68b3d8f-360d-41f0-84fd-1cb225b19e23",
+          "matched_term": "rl environment",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training Research",
+          "url": "https://jobs.ashbyhq.com/openai/4acc3515-887f-4bc9-8c2a-00f36ae480c3",
+          "matched_term": "agent post training",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training, API & Power Users",
+          "url": "https://jobs.ashbyhq.com/openai/bb90d497-06ef-4bb9-878a-e797a19cd834",
+          "matched_term": "agent post training",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training, Artifacts Research",
+          "url": "https://jobs.ashbyhq.com/openai/6897d024-88c1-43ed-adb8-5d2fc5eec984",
+          "matched_term": "agent post training",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training, Computer Use Research",
+          "url": "https://jobs.ashbyhq.com/openai/34c2ed3f-840f-4a68-9a00-0a0606660abf",
+          "matched_term": "agent post training",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training, Connectors Research",
+          "url": "https://jobs.ashbyhq.com/openai/ab9adae3-54b5-457e-9938-77d3278d91a5",
+          "matched_term": "agent post training",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training, Context Research",
+          "url": "https://jobs.ashbyhq.com/openai/df3edefb-6a8b-4ef6-b183-b3f96051783e",
+          "matched_term": "agent post training",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training, Frontier Evals and Environments Research",
+          "url": "https://jobs.ashbyhq.com/openai/9d72171e-2630-4347-83a1-263178644282",
+          "matched_term": "agent post training",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training, Personality",
+          "url": "https://jobs.ashbyhq.com/openai/3302ceaf-f6ca-4803-9846-7fff7ad48a0d",
+          "matched_term": "agent post training",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "Staff Software Engineer, RL Environments",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4729820005",
+          "matched_term": "rl environment",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "product-product-manager-ai-builder",
+      "discipline": "Product",
+      "layer": "Operational",
+      "was": "Product manager",
+      "becomes": "AI builder",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "ai builder",
+        "ai product manager",
+        "product manager  ai",
+        "product manager ai"
+      ],
+      "searchable": true,
+      "distinct_roles": 7,
+      "match_count": 7,
+      "companies": [
+        "Perplexity",
+        "Replit",
+        "Scale AI",
+        "Stripe"
+      ],
+      "by_segment": {
+        "ai_product": 2,
+        "data_supplier": 4,
+        "enterprise": 1
+      },
+      "examples": [
+        {
+          "company": "Perplexity",
+          "segment": "ai_product",
+          "title": "Product Manager, AI Capabilities",
+          "url": "https://jobs.ashbyhq.com/perplexity/7f880194-7276-4b46-8a50-58b48da8882e",
+          "matched_term": "product manager  ai",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Replit",
+          "segment": "ai_product",
+          "title": "Senior AI Builder",
+          "url": "https://jobs.ashbyhq.com/replit/b333118f-965a-4d94-9557-88aa76779e9a",
+          "matched_term": "ai builder",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "AI Product Manager (Coding/Multimodal)",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4609736005",
+          "matched_term": "ai product manager",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "Senior AI Product Manager",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4720501005",
+          "matched_term": "ai product manager",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "Senior AI Product Manager, Cybersecurity",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4720213005",
+          "matched_term": "ai product manager",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "Senior AI Product Manager, Finance Agents",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4611776005",
+          "matched_term": "ai product manager",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Stripe",
+          "segment": "enterprise",
+          "title": "Staff Product Manager, AI",
+          "url": "https://stripe.com/jobs/search?gh_jid=7655023",
+          "matched_term": "product manager  ai",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "software-debugging-mechanistic-interpretability",
+      "discipline": "Software",
+      "layer": "Decision",
+      "was": "Debugging",
+      "becomes": "Mechanistic interpretability",
+      "evidence_type": "Research team page",
+      "terms": [
+        "mechanistic interpretability",
+        "interpretability"
+      ],
+      "searchable": true,
+      "distinct_roles": 6,
+      "match_count": 6,
+      "companies": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "by_segment": {
+        "lab": 6
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Research Engineer, Interpretability",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980430008",
+          "matched_term": "interpretability",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Research Scientist, Interpretability",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980427008",
+          "matched_term": "interpretability",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Staff+ Software Engineer, Infrastructure, Interpretability",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5388612008",
+          "matched_term": "interpretability",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "[Expression of Interest] Research Manager, Interpretability",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980436008",
+          "matched_term": "interpretability",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Researcher, Alignment Interpretability",
+          "url": "https://jobs.ashbyhq.com/openai/d4983a0f-1004-4f27-94b3-e1a38c168c1a",
+          "matched_term": "interpretability",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Researcher, Interpretability",
+          "url": "https://jobs.ashbyhq.com/openai/c44268f1-717b-4da3-9943-2557f7d739f0",
+          "matched_term": "interpretability",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "the-firm-practising-professional-training-data",
+      "discipline": "The firm",
+      "layer": "Structural",
+      "was": "Practising professional",
+      "becomes": "Training data",
+      "evidence_type": "Vendor claim",
+      "terms": [
+        "human data",
+        "domain expert",
+        "expert data",
+        "data quality  ai"
+      ],
+      "searchable": true,
+      "distinct_roles": 5,
+      "match_count": 5,
+      "companies": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "by_segment": {
+        "lab": 5
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Data Operations Manager, Human Data",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5238460008",
+          "matched_term": "human data",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Product Management, Human Data Platform",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5195866008",
+          "matched_term": "human data",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Program Manager, Human Data",
+          "url": "https://jobs.ashbyhq.com/openai/932c9cc1-c542-4f67-8d0d-443de87b8213",
+          "matched_term": "human data",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Research Program Manager, Human Data Campaigns",
+          "url": "https://jobs.ashbyhq.com/openai/5edd5a13-2fc9-427c-ad88-2b67c97a0afe",
+          "matched_term": "human data",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Software Engineer, Research - Human Data",
+          "url": "https://jobs.ashbyhq.com/openai/4d6a5951-9838-434c-830a-22cb938ea228",
+          "matched_term": "human data",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "product-product-design-model-behaviour",
+      "discipline": "Product",
+      "layer": "Decision",
+      "was": "Product design",
+      "becomes": "Model behaviour",
+      "evidence_type": "Job posting",
+      "terms": [
+        "model behaviour",
+        "model behavior",
+        "model policy",
+        "agent behavior",
+        "agent behaviour"
+      ],
+      "searchable": true,
+      "distinct_roles": 4,
+      "match_count": 4,
+      "companies": [
+        "OpenAI",
+        "Perplexity"
+      ],
+      "by_segment": {
+        "ai_product": 1,
+        "lab": 3
+      },
+      "examples": [
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Model Policy Manager, Agentic Safety",
+          "url": "https://jobs.ashbyhq.com/openai/b5a022bb-f7a5-47d9-b5e8-9d1575493dcf",
+          "matched_term": "model policy",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Model Policy Manager, Multimodal Safety",
+          "url": "https://jobs.ashbyhq.com/openai/6de1fad0-a69d-4d81-9d3a-2a3c5512b940",
+          "matched_term": "model policy",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Model Policy Manager, National Security",
+          "url": "https://jobs.ashbyhq.com/openai/50e8714b-c8a2-47f0-bc7c-2a76e988b380",
+          "matched_term": "model policy",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Perplexity",
+          "segment": "ai_product",
+          "title": "Member of Technical Staff (Model Behavior)",
+          "url": "https://jobs.ashbyhq.com/perplexity/2c6ae16b-d03e-4e33-9d32-362c5388e956",
+          "matched_term": "model behavior",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "the-firm-economist-in-house-measurer",
+      "discipline": "The firm",
+      "layer": "Structural",
+      "was": "Economist",
+      "becomes": "In-house measurer",
+      "evidence_type": "Job posting",
+      "terms": [
+        "in house measurer",
+        "economist",
+        "economic research"
+      ],
+      "searchable": true,
+      "distinct_roles": 4,
+      "match_count": 5,
+      "companies": [
+        "Anthropic",
+        "Ramp"
+      ],
+      "by_segment": {
+        "enterprise": 1,
+        "lab": 4
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Regional Research Economist, Economic Research",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5231200008",
+          "matched_term": "economist",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Research Economist, Economic Research",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5018472008",
+          "matched_term": "economist",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Transformative AI Research Economist, Economic Research",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5149802008",
+          "matched_term": "economist",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Ramp",
+          "segment": "enterprise",
+          "title": "Economist, Ramp Economics Lab",
+          "url": "https://jobs.ashbyhq.com/ramp/7c027757-24d8-49f4-90c1-ca3696d244a5",
+          "matched_term": "economist",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "product-partner-embedded-evaluator",
+      "discipline": "Product",
+      "layer": "Decision",
+      "was": "Partner",
+      "becomes": "Embedded evaluator",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "embedded evaluator",
+        "evaluation lead",
+        "applied evaluation",
+        "forward deployed product"
+      ],
+      "searchable": true,
+      "distinct_roles": 2,
+      "match_count": 3,
+      "companies": [
+        "Scale AI"
+      ],
+      "by_segment": {
+        "data_supplier": 3
+      },
+      "examples": [
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "Forward Deployed Product Manager, Enterprise",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4644742005",
+          "matched_term": "forward deployed product",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "Forward Deployed Product Manager, Public Sector",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4713648005",
+          "matched_term": "forward deployed product",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "software-issue-hypothesis",
+      "discipline": "Software",
+      "layer": "Decision",
+      "was": "Issue",
+      "becomes": "Hypothesis",
+      "evidence_type": "Job posting",
+      "terms": [
+        "post training research",
+        "model behavior research"
+      ],
+      "searchable": true,
+      "distinct_roles": 1,
+      "match_count": 1,
+      "companies": [
+        "OpenAI"
+      ],
+      "by_segment": {
+        "lab": 1
+      },
+      "examples": [
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Agent Post-Training Research",
+          "url": "https://jobs.ashbyhq.com/openai/4acc3515-887f-4bc9-8c2a-00f36ae480c3",
+          "matched_term": "post training research",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "science-postdoc-ai-paired-researcher",
+      "discipline": "Science",
+      "layer": "Operational",
+      "was": "Postdoc",
+      "becomes": "AI-paired researcher",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "ai paired researcher",
+        "ai resident",
+        "research fellow  ai",
+        "ai for science"
+      ],
+      "searchable": true,
+      "distinct_roles": 1,
+      "match_count": 1,
+      "companies": [
+        "Anthropic"
+      ],
+      "by_segment": {
+        "lab": 1
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Partnership Manager, AI for Science",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5407938008",
+          "matched_term": "ai for science",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "legal-practice-innovation-director-of-ai",
+      "discipline": "Legal",
+      "layer": "Structural",
+      "was": "Practice innovation",
+      "becomes": "Director of AI",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "director of ai",
+        "head of ai",
+        "ai counsel",
+        "legal operations  ai"
+      ],
+      "searchable": true,
+      "distinct_roles": 1,
+      "match_count": 1,
+      "companies": [
+        "Harvey"
+      ],
+      "by_segment": {
+        "ai_product": 1
+      },
+      "examples": [
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Privacy and AI Counsel, EMEA",
+          "url": "https://jobs.ashbyhq.com/harvey/7ef2c12e-dd17-4d8c-a445-bd4ebf559484",
+          "matched_term": "ai counsel",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "the-firm-compliance-ai-assurance",
+      "discipline": "The firm",
+      "layer": "Decision",
+      "was": "Compliance",
+      "becomes": "AI assurance",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "ai assurance",
+        "ai governance",
+        "responsible ai",
+        "ai compliance",
+        "model risk"
+      ],
+      "searchable": true,
+      "distinct_roles": 1,
+      "match_count": 1,
+      "companies": [
+        "Scale AI"
+      ],
+      "by_segment": {
+        "data_supplier": 1
+      },
+      "examples": [
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "GenAI Compliance Operations & Programs Associate",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4730306005",
+          "matched_term": "ai compliance",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "the-firm-org-behaviour-agent-society-behaviour",
+      "discipline": "The firm",
+      "layer": "Structural",
+      "was": "Org behaviour",
+      "becomes": "Agent society behaviour",
+      "evidence_type": "Job posting",
+      "terms": [
+        "agent society behaviour",
+        "multi agent",
+        "multiagent"
+      ],
+      "searchable": true,
+      "distinct_roles": 1,
+      "match_count": 1,
+      "companies": [
+        "Anthropic"
+      ],
+      "by_segment": {
+        "lab": 1
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Staff+ Research Scientist, Multi-Agent",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4017544008",
+          "matched_term": "multi agent",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "product-analytics-and-insights-behavioural-models",
+      "discipline": "Product",
+      "layer": "Decision",
+      "was": "Analytics & insights",
+      "becomes": "Behavioural models",
+      "evidence_type": "Named study",
+      "terms": [
+        "user research  ai",
+        "behavioral science"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "science-bench-scientist-autonomous-lab-supervisor",
+      "discipline": "Science",
+      "layer": "Operational",
+      "was": "Bench scientist",
+      "becomes": "Autonomous lab supervisor",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "autonomous lab supervisor",
+        "lab automation",
+        "autonomous lab",
+        "self driving lab"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "science-lab-automation-ai-lab-innovation",
+      "discipline": "Science",
+      "layer": "Operational",
+      "was": "Lab automation",
+      "becomes": "AI-lab innovation",
+      "evidence_type": "Job posting",
+      "terms": [
+        "ai lab innovation",
+        "lab innovation"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "science-reading-the-literature-understanding-extraction",
+      "discipline": "Science",
+      "layer": "Operational",
+      "was": "Reading the literature",
+      "becomes": "Understanding extraction",
+      "evidence_type": "Argued only",
+      "terms": [
+        "understanding extraction"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "science-experiment-design-open-ended-search",
+      "discipline": "Science",
+      "layer": "Decision",
+      "was": "Experiment design",
+      "becomes": "Open-ended search",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "open ended search",
+        "open endedness",
+        "open ended learning"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "legal-document-review-audit-sampling",
+      "discipline": "Legal",
+      "layer": "Operational",
+      "was": "Document review",
+      "becomes": "Audit sampling",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "audit sampling",
+        "review quality",
+        "legal quality"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "legal-apprenticeship-on-live-matters-case-simulator",
+      "discipline": "Legal",
+      "layer": "Structural",
+      "was": "Apprenticeship on live matters",
+      "becomes": "Case simulator",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "case simulator"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "legal-billable-hour-outcome-pricing",
+      "discipline": "Legal",
+      "layer": "Structural",
+      "was": "Billable hour",
+      "becomes": "Outcome pricing",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "outcome pricing",
+        "outcome based pricing",
+        "pricing strategy  ai"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "medicine-medical-scribe-ambient-recorder",
+      "discipline": "Medicine",
+      "layer": "Operational",
+      "was": "Medical scribe",
+      "becomes": "Ambient recorder",
+      "evidence_type": "Named study",
+      "terms": [
+        "ambient recorder",
+        "ambient",
+        "clinical documentation"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "medicine-clinical-note-note-review",
+      "discipline": "Medicine",
+      "layer": "Operational",
+      "was": "Clinical note",
+      "becomes": "Note review",
+      "evidence_type": "Named study",
+      "terms": [
+        "clinical review",
+        "clinical quality"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "medicine-radiologist-ai-assisted-reader",
+      "discipline": "Medicine",
+      "layer": "Decision",
+      "was": "Radiologist",
+      "becomes": "AI-assisted reader",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "ai assisted reader",
+        "clinical ai",
+        "radiology ai"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "medicine-clinical-audit-continuous-model-monitoring",
+      "discipline": "Medicine",
+      "layer": "Decision",
+      "was": "Clinical audit",
+      "becomes": "Continuous model monitoring",
+      "evidence_type": "Named study",
+      "terms": [
+        "continuous model monitoring",
+        "model monitoring",
+        "clinical safety"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "medicine-health-it-procurement-chief-health-ai-officer",
+      "discipline": "Medicine",
+      "layer": "Structural",
+      "was": "Health IT procurement",
+      "becomes": "Chief Health AI Officer",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "chief health ai officer",
+        "health ai",
+        "chief ai officer"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "the-firm-software-company-computational-lab",
+      "discipline": "The firm",
+      "layer": "Structural",
+      "was": "Software company",
+      "becomes": "Computational lab",
+      "evidence_type": "Argued only",
+      "terms": [],
+      "searchable": false,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    }
+  ]
+}
