@@ -1,9 +1,9 @@
 {
   "method": "Case-insensitive substring match of each row's `becomes` value (plus any aliases in data/aliases.json) against posting titles only. Not a classifier. `distinct_roles` counts one per (company, title) and is the number worth quoting; `match_count` is the raw posting count, which boards inflate by listing a role once per location. Zero matches means these boards do not use the phrase, not that the role is absent.",
-  "snapshot_date": "2026-10-12",
-  "posting_count": 4792,
+  "snapshot_date": "2026-10-19",
+  "posting_count": 4788,
   "board_count": 20,
-  "rows_with_matches": 17,
+  "rows_with_matches": 18,
   "rows_unsearchable": 1,
   "rows": [
     {
@@ -17,8 +17,8 @@
         "forward deployed"
       ],
       "searchable": true,
-      "distinct_roles": 99,
-      "match_count": 179,
+      "distinct_roles": 102,
+      "match_count": 181,
       "companies": [
         "Anthropic",
         "Cursor",
@@ -36,8 +36,8 @@
         "ai_infra": 2,
         "ai_product": 15,
         "data_supplier": 14,
-        "enterprise": 117,
-        "lab": 31
+        "enterprise": 118,
+        "lab": 32
       },
       "examples": [
         {
@@ -52,9 +52,17 @@
           "company": "Anthropic",
           "segment": "lab",
           "title": "Manager, Forward Deployed Engineering",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5099753008",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5385634008",
           "matched_term": "forward deployed",
           "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Staff Forward Deployed Engineer",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5449229008",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-10-19"
         },
         {
           "company": "Cursor",
@@ -111,14 +119,6 @@
           "url": "https://jobs.ashbyhq.com/cursor/f7ec7811-a573-42fa-8ade-01e2d07681ef",
           "matched_term": "forward deployed",
           "first_seen": "2026-09-26"
-        },
-        {
-          "company": "Cursor",
-          "segment": "ai_product",
-          "title": "Regional Director, Forward Deployed Engineering - India",
-          "url": "https://jobs.ashbyhq.com/cursor/c30b1b69-518a-4fdd-a316-667380bcd608",
-          "matched_term": "forward deployed",
-          "first_seen": "2026-09-28"
         }
       ]
     },
@@ -136,12 +136,11 @@
         "ai solutions engineer"
       ],
       "searchable": true,
-      "distinct_roles": 49,
-      "match_count": 68,
+      "distinct_roles": 52,
+      "match_count": 70,
       "companies": [
         "Anthropic",
         "Databricks",
-        "Figure",
         "OpenAI",
         "Perplexity",
         "Ramp",
@@ -150,10 +149,9 @@
       ],
       "by_segment": {
         "ai_product": 1,
-        "data_supplier": 3,
-        "enterprise": 11,
-        "lab": 52,
-        "robotics": 1
+        "data_supplier": 4,
+        "enterprise": 10,
+        "lab": 55
       },
       "examples": [
         {
@@ -167,6 +165,22 @@
         {
           "company": "Anthropic",
           "segment": "lab",
+          "title": "Applied AI Engineer, Beneficial Deployments (Clinical Development, Rare and Neglected Diseases)",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5445760008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-10-19"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Applied AI Engineer, Beneficial Deployments (Lab Automation)",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5440821008",
+          "matched_term": "ai engineer",
+          "first_seen": "2026-10-19"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
           "title": "Applied AI Engineer, Beneficial Deployments (Life Sciences)",
           "url": "https://job-boards.greenhouse.io/anthropic/jobs/5437172008",
           "matched_term": "ai engineer",
@@ -175,18 +189,10 @@
         {
           "company": "Anthropic",
           "segment": "lab",
-          "title": "Applied AI Engineer, DNB",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5435282008",
+          "title": "Applied AI Engineer, Enterprise",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5354765008",
           "matched_term": "ai engineer",
           "first_seen": "2026-09-28"
-        },
-        {
-          "company": "Anthropic",
-          "segment": "lab",
-          "title": "Applied AI Engineer, Enterprise",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5390754008",
-          "matched_term": "ai engineer",
-          "first_seen": "2026-09-26"
         },
         {
           "company": "Anthropic",
@@ -215,26 +221,18 @@
         {
           "company": "Anthropic",
           "segment": "lab",
-          "title": "Manager, Applied AI Engineering (Megas)",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5442934008",
+          "title": "Applied AI Engineer, Startups (Life Sciences)",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5454650008",
           "matched_term": "ai engineer",
-          "first_seen": "2026-10-12"
+          "first_seen": "2026-10-19"
         },
         {
           "company": "Anthropic",
           "segment": "lab",
-          "title": "Staff Software Engineer, GTM AI Engineering",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5390966008",
+          "title": "Applied AI Engineer, Startups (Physical AI)",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5454673008",
           "matched_term": "ai engineer",
-          "first_seen": "2026-09-26"
-        },
-        {
-          "company": "Databricks",
-          "segment": "enterprise",
-          "title": "AI Engineer - FDE (Forward Deployed Engineer)",
-          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8574655002",
-          "matched_term": "ai engineer",
-          "first_seen": "2026-09-26"
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -252,12 +250,12 @@
       ],
       "searchable": true,
       "distinct_roles": 20,
-      "match_count": 35,
+      "match_count": 34,
       "companies": [
         "Harvey"
       ],
       "by_segment": {
-        "ai_product": 35
+        "ai_product": 34
       },
       "examples": [
         {
@@ -473,8 +471,7 @@
         "Browserbase",
         "Decagon",
         "Mercor",
-        "Replit",
-        "Sierra"
+        "Replit"
       ],
       "by_segment": {
         "ai_infra": 1,
@@ -497,6 +494,14 @@
           "url": "https://jobs.ashbyhq.com/decagon/08b34a9e-6e98-40f3-9a81-ee6667bef97b",
           "matched_term": "agent experience",
           "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Decagon",
+          "segment": "ai_product",
+          "title": "Agent Product Manager",
+          "url": "https://jobs.ashbyhq.com/decagon/63face0d-b26a-4ea7-b03d-2fa842013063",
+          "matched_term": "agent product manager",
+          "first_seen": "2026-10-19"
         },
         {
           "company": "Decagon",
@@ -551,14 +556,6 @@
           "segment": "data_supplier",
           "title": "Fullstack Software Engineer, Agent Platform",
           "url": "https://jobs.ashbyhq.com/mercor/3750ee8a-64d1-46ac-b4f9-6a823f949034",
-          "matched_term": "agent platform",
-          "first_seen": "2026-09-26"
-        },
-        {
-          "company": "Replit",
-          "segment": "ai_product",
-          "title": "Staff Software Engineer, Agent Platform",
-          "url": "https://jobs.ashbyhq.com/replit/43bd4e63-22c3-4b80-abd2-67eaf2c89790",
           "matched_term": "agent platform",
           "first_seen": "2026-09-26"
         }
@@ -979,7 +976,7 @@
           "company": "Anthropic",
           "segment": "lab",
           "title": "Regional Research Economist, Economic Research",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5231200008",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5231205008",
           "matched_term": "economist",
           "first_seen": "2026-09-26"
         },
@@ -1002,9 +999,9 @@
         {
           "company": "Ramp",
           "segment": "enterprise",
-          "title": "Economist, Ramp Economics Lab",
+          "title": "Senior Analyst, Economic Research and Special Projects",
           "url": "https://jobs.ashbyhq.com/ramp/7c027757-24d8-49f4-90c1-ca3696d244a5",
-          "matched_term": "economist",
+          "matched_term": "economic research",
           "first_seen": "2026-09-26"
         }
       ]
@@ -1046,6 +1043,50 @@
           "title": "Forward Deployed Product Manager, Public Sector",
           "url": "https://job-boards.greenhouse.io/scaleai/jobs/4713648005",
           "matched_term": "forward deployed product",
+          "first_seen": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "the-firm-compliance-ai-assurance",
+      "discipline": "The firm",
+      "layer": "Decision",
+      "was": "Compliance",
+      "becomes": "AI assurance",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "ai assurance",
+        "ai governance",
+        "responsible ai",
+        "ai compliance",
+        "model risk"
+      ],
+      "searchable": true,
+      "distinct_roles": 2,
+      "match_count": 2,
+      "companies": [
+        "Anthropic",
+        "Scale AI"
+      ],
+      "by_segment": {
+        "data_supplier": 1,
+        "lab": 1
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Policy Development, Technical AI Governance",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5451081008",
+          "matched_term": "ai governance",
+          "first_seen": "2026-10-19"
+        },
+        {
+          "company": "Scale AI",
+          "segment": "data_supplier",
+          "title": "GenAI Compliance Operations & Programs Associate",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4730306005",
+          "matched_term": "ai compliance",
           "first_seen": "2026-09-26"
         }
       ]
@@ -1122,6 +1163,39 @@
       ]
     },
     {
+      "id": "science-bench-scientist-autonomous-lab-supervisor",
+      "discipline": "Science",
+      "layer": "Operational",
+      "was": "Bench scientist",
+      "becomes": "Autonomous lab supervisor",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "autonomous lab supervisor",
+        "lab automation",
+        "autonomous lab",
+        "self driving lab"
+      ],
+      "searchable": true,
+      "distinct_roles": 1,
+      "match_count": 1,
+      "companies": [
+        "Anthropic"
+      ],
+      "by_segment": {
+        "lab": 1
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Applied AI Engineer, Beneficial Deployments (Lab Automation)",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5440821008",
+          "matched_term": "lab automation",
+          "first_seen": "2026-10-19"
+        }
+      ]
+    },
+    {
       "id": "science-postdoc-ai-paired-researcher",
       "discipline": "Science",
       "layer": "Operational",
@@ -1188,40 +1262,6 @@
       ]
     },
     {
-      "id": "the-firm-compliance-ai-assurance",
-      "discipline": "The firm",
-      "layer": "Decision",
-      "was": "Compliance",
-      "becomes": "AI assurance",
-      "evidence_type": "Industry reporting",
-      "terms": [
-        "ai assurance",
-        "ai governance",
-        "responsible ai",
-        "ai compliance",
-        "model risk"
-      ],
-      "searchable": true,
-      "distinct_roles": 1,
-      "match_count": 1,
-      "companies": [
-        "Scale AI"
-      ],
-      "by_segment": {
-        "data_supplier": 1
-      },
-      "examples": [
-        {
-          "company": "Scale AI",
-          "segment": "data_supplier",
-          "title": "GenAI Compliance Operations & Programs Associate",
-          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4730306005",
-          "matched_term": "ai compliance",
-          "first_seen": "2026-09-26"
-        }
-      ]
-    },
-    {
       "id": "product-analytics-and-insights-behavioural-models",
       "discipline": "Product",
       "layer": "Decision",
@@ -1231,26 +1271,6 @@
       "terms": [
         "user research  ai",
         "behavioral science"
-      ],
-      "searchable": true,
-      "distinct_roles": 0,
-      "match_count": 0,
-      "companies": [],
-      "by_segment": {},
-      "examples": []
-    },
-    {
-      "id": "science-bench-scientist-autonomous-lab-supervisor",
-      "discipline": "Science",
-      "layer": "Operational",
-      "was": "Bench scientist",
-      "becomes": "Autonomous lab supervisor",
-      "evidence_type": "Industry reporting",
-      "terms": [
-        "autonomous lab supervisor",
-        "lab automation",
-        "autonomous lab",
-        "self driving lab"
       ],
       "searchable": true,
       "distinct_roles": 0,
