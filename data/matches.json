@@ -1,9 +1,9 @@
 {
   "method": "Case-insensitive substring match of each row's `becomes` value (plus any aliases in data/aliases.json) against posting titles only. Not a classifier. `distinct_roles` counts one per (company, title) and is the number worth quoting; `match_count` is the raw posting count, which boards inflate by listing a role once per location. Zero matches means these boards do not use the phrase, not that the role is absent.",
-  "snapshot_date": "2026-11-09",
-  "posting_count": 4875,
+  "snapshot_date": "2026-11-16",
+  "posting_count": 4884,
   "board_count": 20,
-  "rows_with_matches": 18,
+  "rows_with_matches": 17,
   "rows_unsearchable": 1,
   "rows": [
     {
@@ -17,8 +17,8 @@
         "forward deployed"
       ],
       "searchable": true,
-      "distinct_roles": 117,
-      "match_count": 189,
+      "distinct_roles": 109,
+      "match_count": 170,
       "companies": [
         "Anthropic",
         "Cursor",
@@ -34,17 +34,17 @@
       ],
       "by_segment": {
         "ai_infra": 3,
-        "ai_product": 16,
-        "data_supplier": 14,
-        "enterprise": 113,
-        "lab": 43
+        "ai_product": 15,
+        "data_supplier": 12,
+        "enterprise": 96,
+        "lab": 44
       },
       "examples": [
         {
           "company": "Anthropic",
           "segment": "lab",
           "title": "Forward Deployed Engineer",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5391021008",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5423029008",
           "matched_term": "forward deployed",
           "first_seen": "2026-09-26"
         },
@@ -52,9 +52,9 @@
           "company": "Anthropic",
           "segment": "lab",
           "title": "Manager, Forward Deployed Engineering",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5471721008",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5385634008",
           "matched_term": "forward deployed",
-          "first_seen": "2026-11-09"
+          "first_seen": "2026-09-26"
         },
         {
           "company": "Anthropic",
@@ -75,7 +75,7 @@
         {
           "company": "Cursor",
           "segment": "ai_product",
-          "title": "Forward Deployed Engineer (Australia)",
+          "title": "Forward Deployed Engineer (Australia/Singapore)",
           "url": "https://jobs.ashbyhq.com/cursor/44264403-5674-40b7-8b8d-e60b0a86e9ec",
           "matched_term": "forward deployed",
           "first_seen": "2026-09-26"
@@ -83,26 +83,26 @@
         {
           "company": "Cursor",
           "segment": "ai_product",
-          "title": "Forward Deployed Engineer - EMEA",
-          "url": "https://jobs.ashbyhq.com/cursor/0a82f564-de1b-4c72-9ba4-10cf2b63c483",
-          "matched_term": "forward deployed",
-          "first_seen": "2026-09-26"
-        },
-        {
-          "company": "Cursor",
-          "segment": "ai_product",
           "title": "Forward Deployed Engineer - India",
-          "url": "https://jobs.ashbyhq.com/cursor/166c3951-1d2a-4e61-b79b-bedefe96073b",
+          "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
           "matched_term": "forward deployed",
-          "first_seen": "2026-09-28"
+          "first_seen": "2026-11-16"
         },
         {
           "company": "Cursor",
           "segment": "ai_product",
           "title": "Forward Deployed Engineer - Japan",
-          "url": "https://jobs.ashbyhq.com/cursor/38bd03a3-3d65-4868-87df-cb248d0a45e3",
+          "url": "https://jobs.ashbyhq.com/cursor/7678325b-cd6c-4cf6-97af-26ba37e615ab",
           "matched_term": "forward deployed",
-          "first_seen": "2026-10-12"
+          "first_seen": "2026-11-16"
+        },
+        {
+          "company": "Cursor",
+          "segment": "ai_product",
+          "title": "Forward Deployed Engineer, Western Europe",
+          "url": "https://jobs.ashbyhq.com/cursor/c4afc6fd-b8c8-413f-9010-0000323304aa",
+          "matched_term": "forward deployed",
+          "first_seen": "2026-11-16"
         },
         {
           "company": "Cursor",
@@ -136,8 +136,8 @@
         "ai solutions engineer"
       ],
       "searchable": true,
-      "distinct_roles": 55,
-      "match_count": 77,
+      "distinct_roles": 58,
+      "match_count": 79,
       "companies": [
         "Anthropic",
         "Databricks",
@@ -149,9 +149,9 @@
       ],
       "by_segment": {
         "ai_product": 1,
-        "data_supplier": 6,
+        "data_supplier": 7,
         "enterprise": 11,
-        "lab": 59
+        "lab": 60
       },
       "examples": [
         {
@@ -173,7 +173,7 @@
         {
           "company": "Anthropic",
           "segment": "lab",
-          "title": "Applied AI Engineer, Beneficial Deployments (Life Sciences)",
+          "title": "Applied AI Engineer, Beneficial Deployments, Life Sciences (Molecular Design)",
           "url": "https://job-boards.greenhouse.io/anthropic/jobs/5437172008",
           "matched_term": "ai engineer",
           "first_seen": "2026-10-05"
@@ -249,13 +249,13 @@
         "domain expert  legal"
       ],
       "searchable": true,
-      "distinct_roles": 23,
-      "match_count": 52,
+      "distinct_roles": 27,
+      "match_count": 60,
       "companies": [
         "Harvey"
       ],
       "by_segment": {
-        "ai_product": 52
+        "ai_product": 60
       },
       "examples": [
         {
@@ -269,10 +269,18 @@
         {
           "company": "Harvey",
           "segment": "ai_product",
-          "title": "Head of Legal Engineering, EMEA",
-          "url": "https://jobs.ashbyhq.com/harvey/b0570329-6c45-4446-9314-146c9dead90b",
+          "title": "Head of Legal Engineering, APAC",
+          "url": "https://jobs.ashbyhq.com/harvey/b8e8a8a6-9609-4095-af49-ba7dcf82dbe1",
           "matched_term": "legal engineer",
-          "first_seen": "2026-09-26"
+          "first_seen": "2026-11-16"
+        },
+        {
+          "company": "Harvey",
+          "segment": "ai_product",
+          "title": "Head of Legal Engineering, Japan",
+          "url": "https://jobs.ashbyhq.com/harvey/90446359-99f5-4fbf-afe9-417285baaa77",
+          "matched_term": "legal engineer",
+          "first_seen": "2026-11-16"
         },
         {
           "company": "Harvey",
@@ -327,14 +335,6 @@
           "segment": "ai_product",
           "title": "Legal Engineer Manager",
           "url": "https://jobs.ashbyhq.com/harvey/1b76856d-c427-43f2-8c47-7d8f8727c86f",
-          "matched_term": "legal engineer",
-          "first_seen": "2026-11-09"
-        },
-        {
-          "company": "Harvey",
-          "segment": "ai_product",
-          "title": "Legal Engineer Manager, Germany",
-          "url": "https://jobs.ashbyhq.com/harvey/e8696182-927b-4a66-a058-be39ab583e7b",
           "matched_term": "legal engineer",
           "first_seen": "2026-11-09"
         }
@@ -562,70 +562,6 @@
       ]
     },
     {
-      "id": "software-debugging-mechanistic-interpretability",
-      "discipline": "Software",
-      "layer": "Decision",
-      "was": "Debugging",
-      "becomes": "Mechanistic interpretability",
-      "evidence_type": "Research team page",
-      "terms": [
-        "mechanistic interpretability",
-        "interpretability"
-      ],
-      "searchable": true,
-      "distinct_roles": 5,
-      "match_count": 5,
-      "companies": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "by_segment": {
-        "lab": 5
-      },
-      "examples": [
-        {
-          "company": "Anthropic",
-          "segment": "lab",
-          "title": "Research Engineer, Interpretability",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980430008",
-          "matched_term": "interpretability",
-          "first_seen": "2026-09-26"
-        },
-        {
-          "company": "Anthropic",
-          "segment": "lab",
-          "title": "Research Scientist, Interpretability",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980427008",
-          "matched_term": "interpretability",
-          "first_seen": "2026-09-26"
-        },
-        {
-          "company": "Anthropic",
-          "segment": "lab",
-          "title": "[Expression of Interest] Research Manager, Interpretability",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980436008",
-          "matched_term": "interpretability",
-          "first_seen": "2026-09-26"
-        },
-        {
-          "company": "OpenAI",
-          "segment": "lab",
-          "title": "Researcher, Alignment Interpretability",
-          "url": "https://jobs.ashbyhq.com/openai/d4983a0f-1004-4f27-94b3-e1a38c168c1a",
-          "matched_term": "interpretability",
-          "first_seen": "2026-09-26"
-        },
-        {
-          "company": "OpenAI",
-          "segment": "lab",
-          "title": "Researcher, Interpretability",
-          "url": "https://jobs.ashbyhq.com/openai/c44268f1-717b-4da3-9943-2557f7d739f0",
-          "matched_term": "interpretability",
-          "first_seen": "2026-09-26"
-        }
-      ]
-    },
-    {
       "id": "product-product-manager-ai-builder",
       "discipline": "Product",
       "layer": "Operational",
@@ -823,59 +759,57 @@
       ]
     },
     {
-      "id": "the-firm-economist-in-house-measurer",
-      "discipline": "The firm",
-      "layer": "Structural",
-      "was": "Economist",
-      "becomes": "In-house measurer",
-      "evidence_type": "Job posting",
+      "id": "software-debugging-mechanistic-interpretability",
+      "discipline": "Software",
+      "layer": "Decision",
+      "was": "Debugging",
+      "becomes": "Mechanistic interpretability",
+      "evidence_type": "Research team page",
       "terms": [
-        "in house measurer",
-        "economist",
-        "economic research"
+        "mechanistic interpretability",
+        "interpretability"
       ],
       "searchable": true,
       "distinct_roles": 4,
-      "match_count": 9,
+      "match_count": 4,
       "companies": [
         "Anthropic",
-        "Ramp"
+        "OpenAI"
       ],
       "by_segment": {
-        "enterprise": 1,
-        "lab": 8
+        "lab": 4
       },
       "examples": [
         {
           "company": "Anthropic",
           "segment": "lab",
-          "title": "Political Economist, Rule of Law",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5474544008",
-          "matched_term": "economist",
-          "first_seen": "2026-11-09"
-        },
-        {
-          "company": "Anthropic",
-          "segment": "lab",
-          "title": "Regional Research Economist, Economic Research",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5460515008",
-          "matched_term": "economist",
-          "first_seen": "2026-10-26"
-        },
-        {
-          "company": "Anthropic",
-          "segment": "lab",
-          "title": "Transformative AI Research Economist, Economic Research",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5149802008",
-          "matched_term": "economist",
+          "title": "Research Engineer, Interpretability",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980430008",
+          "matched_term": "interpretability",
           "first_seen": "2026-09-26"
         },
         {
-          "company": "Ramp",
-          "segment": "enterprise",
-          "title": "Senior Analyst, Economic Research and Special Projects",
-          "url": "https://jobs.ashbyhq.com/ramp/7c027757-24d8-49f4-90c1-ca3696d244a5",
-          "matched_term": "economic research",
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Research Scientist, Interpretability",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980427008",
+          "matched_term": "interpretability",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "[Expression of Interest] Research Manager, Interpretability",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980436008",
+          "matched_term": "interpretability",
+          "first_seen": "2026-09-26"
+        },
+        {
+          "company": "OpenAI",
+          "segment": "lab",
+          "title": "Researcher, Alignment Interpretability",
+          "url": "https://jobs.ashbyhq.com/openai/d4983a0f-1004-4f27-94b3-e1a38c168c1a",
+          "matched_term": "interpretability",
           "first_seen": "2026-09-26"
         }
       ]
@@ -929,6 +863,56 @@
           "url": "https://jobs.ashbyhq.com/Perplexity/2c6ae16b-d03e-4e33-9d32-362c5388e956",
           "matched_term": "model behavior",
           "first_seen": "2026-11-09"
+        }
+      ]
+    },
+    {
+      "id": "the-firm-economist-in-house-measurer",
+      "discipline": "The firm",
+      "layer": "Structural",
+      "was": "Economist",
+      "becomes": "In-house measurer",
+      "evidence_type": "Job posting",
+      "terms": [
+        "in house measurer",
+        "economist",
+        "economic research"
+      ],
+      "searchable": true,
+      "distinct_roles": 3,
+      "match_count": 8,
+      "companies": [
+        "Anthropic",
+        "Ramp"
+      ],
+      "by_segment": {
+        "enterprise": 1,
+        "lab": 7
+      },
+      "examples": [
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Political Economist, Rule of Law",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5474544008",
+          "matched_term": "economist",
+          "first_seen": "2026-11-09"
+        },
+        {
+          "company": "Anthropic",
+          "segment": "lab",
+          "title": "Regional Research Economist, Economic Research",
+          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5460524008",
+          "matched_term": "economist",
+          "first_seen": "2026-11-09"
+        },
+        {
+          "company": "Ramp",
+          "segment": "enterprise",
+          "title": "Senior Analyst, Economic Research and Special Projects",
+          "url": "https://jobs.ashbyhq.com/ramp/7c027757-24d8-49f4-90c1-ca3696d244a5",
+          "matched_term": "economic research",
+          "first_seen": "2026-09-26"
         }
       ]
     },
@@ -1165,39 +1149,6 @@
       ]
     },
     {
-      "id": "science-postdoc-ai-paired-researcher",
-      "discipline": "Science",
-      "layer": "Operational",
-      "was": "Postdoc",
-      "becomes": "AI-paired researcher",
-      "evidence_type": "Industry reporting",
-      "terms": [
-        "ai paired researcher",
-        "ai resident",
-        "research fellow  ai",
-        "ai for science"
-      ],
-      "searchable": true,
-      "distinct_roles": 1,
-      "match_count": 1,
-      "companies": [
-        "Anthropic"
-      ],
-      "by_segment": {
-        "lab": 1
-      },
-      "examples": [
-        {
-          "company": "Anthropic",
-          "segment": "lab",
-          "title": "Partnership Manager, AI for Science",
-          "url": "https://job-boards.greenhouse.io/anthropic/jobs/5407938008",
-          "matched_term": "ai for science",
-          "first_seen": "2026-09-26"
-        }
-      ]
-    },
-    {
       "id": "product-analytics-and-insights-behavioural-models",
       "discipline": "Product",
       "layer": "Decision",
@@ -1225,6 +1176,26 @@
       "terms": [
         "ai lab innovation",
         "lab innovation"
+      ],
+      "searchable": true,
+      "distinct_roles": 0,
+      "match_count": 0,
+      "companies": [],
+      "by_segment": {},
+      "examples": []
+    },
+    {
+      "id": "science-postdoc-ai-paired-researcher",
+      "discipline": "Science",
+      "layer": "Operational",
+      "was": "Postdoc",
+      "becomes": "AI-paired researcher",
+      "evidence_type": "Industry reporting",
+      "terms": [
+        "ai paired researcher",
+        "ai resident",
+        "research fellow  ai",
+        "ai for science"
       ],
       "searchable": true,
       "distinct_roles": 0,
